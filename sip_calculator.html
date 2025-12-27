@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h2>SIP Calculator</h2>
+        
+        <div class="input-group">
+            <label for="monthly-sip">Monthly SIP Amount ($):</label>
+            <input type="number" id="monthly-sip" value="5000">
+        </div>
+
+        <div class="input-group">
+            <label for="rate-of-return">Expected Rate of Return (%):</label>
+            <input type="number" id="rate-of-return" value="12">
+        </div>
+
+        <div class="input-group">
+            <label for="investment-period">Investment Period (Years):</label>
+            <input type="number" id="investment-period" value="10">
+        </div>
+
+        <button onclick="calculateSIP()">Calculate</button>
+
+        <div class="results-container">
+            <p>Invested Amount: <span id="invested-amount">0</span></p>
+            <p>Estimated Returns: <span id="estimated-returns">0</span></p>
+            <p>Total Value: <span id="total-value">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

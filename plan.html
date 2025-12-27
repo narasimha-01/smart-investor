@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Plan - Smart Investment Advisor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <header class="navbar">
+        <div class="logo">Smart Invest</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plan.html" class="active">Plan</a></li>
+                <li><a href="simulator.html">Simulator</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="#" id="chatbot-toggle">Chatbot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Create Your Investment Plan</h1>
+
+        <div class="input-section glow-card">
+            <div class="input-group">
+                <label for="monthly-income">Monthly Income (₹)</label>
+                <input type="number" id="monthly-income" placeholder="e.g., 50000" class="glowing-input">
+            </div>
+            <div class="input-group">
+                <label for="monthly-expenses">Monthly Expenses (₹)</label>
+                <input type="number" id="monthly-expenses" placeholder="e.g., 25000" class="glowing-input">
+            </div>
+            <button class="cta-button glow-on-hover" id="calculate-btn">Calculate Savings</button>
+        </div>
+
+        <div class="results-section">
+            <div class="results-summary">
+                <div class="result-card glow-card">
+                    <p class="card-label">Your Monthly Savings</p>
+                    <h2 class="card-value" id="savings-value">₹ 0</h2>
+                </div>
+                <div class="result-card glow-card">
+                    <p class="card-label">Savings Goal Achievement</p>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="savings-progress" style="width: 0%;"></div>
+                    </div>
+                    <p class="progress-text" id="progress-text">0% Achieved</p>
+                </div>
+            </div>
+
+            <div class="chart-container glow-card">
+                <canvas id="savingsChart"></canvas>
+            </div>
+        </div>
+
+        <div class="recommendations-section">
+            <h2 class="section-title">Investment Recommendations</h2>
+            <div class="recommendation-grid">
+                <div class="recommendation-card glow-card">
+                    <i class="fas fa-chart-line icon-glow"></i>
+                    <h3>Systematic Investment Plan (SIP)</h3>
+                    <p>Ideal for long-term goals. Invest small, regular amounts.</p>
+                </div>
+                <div class="recommendation-card glow-card">
+                    <i class="fas fa-chart-area icon-glow"></i>
+                    <h3>Stocks & Equities</h3>
+                    <p>High-risk, high-reward. Requires market knowledge.</p>
+                </div>
+                <div class="recommendation-card glow-card">
+                    <i class="fas fa-money-check-alt icon-glow"></i>
+                    <h3>Fixed Deposits (FD)</h3>
+                    <p>Low-risk, fixed returns. Safe for short-term savings.</p>
+                </div>
+                <div class="recommendation-card glow-card">
+                    <i class="fas fa-gem icon-glow"></i>
+                    <h3>Gold & Precious Metals</h3>
+                    <p>A hedge against inflation. Diversify your portfolio.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <h4>Investment Bot</h4>
+            <button id="chatbot-close">&times;</button>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="chat-message bot-message">
+                <p>Hello! I'm your investment assistant. Ask me anything about finance!</p>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Type your question...">
+            <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Disclaimer: This project is for educational purposes only, not financial advice. Please consult a professional advisor before investing.</p>
+    </footer>
+
+    <script src="script-plan.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="charts.js"></script>
+</body>
+</html>

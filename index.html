@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Investment Advisor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <header class="navbar">
+        <div class="logo">Smart Invest</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="plan.html">Plan</a></li>
+                <li><a href="simulator.html">Simulator</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="#" id="chatbot-toggle">Chatbot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title"></h1>
+            <p class="hero-subtitle">Your personal guide to financial freedom.</p>
+            <a href="plan.html" class="cta-button glow-on-hover">Get Started <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </main>
+
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <h4>Investment Bot</h4>
+            <button id="chatbot-close">&times;</button>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="chat-message bot-message">
+                <p>Hello! I'm your investment assistant. Ask me anything about finance!</p>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Type your question...">
+            <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Disclaimer: This project is for educational purposes only, not financial advice. Please consult a professional advisor before investing.</p>
+    </footer>
+
+    <script src="script-index.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>

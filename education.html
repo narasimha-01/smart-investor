@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Hub - Smart Investment Advisor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <header class="navbar">
+        <div class="logo">Smart Invest</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plan.html">Plan</a></li>
+                <li><a href="simulator.html">Simulator</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="education.html" class="active">Education</a></li>
+                <li><a href="#" id="chatbot-toggle">Chatbot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Education Hub</h1>
+
+        <div class="education-grid">
+            <div class="education-card glow-card">
+                <i class="fas fa-lightbulb icon-glow"></i>
+                <h3>What is an SIP?</h3>
+                <p>Learn the basics of Systematic Investment Plans.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                </div>
+                <p class="progress-text">70% Complete</p>
+            </div>
+            <div class="education-card glow-card">
+                <i class="fas fa-chart-line icon-glow"></i>
+                <h3>Stocks vs Mutual Funds</h3>
+                <p>Understand the key differences and which is right for you.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 50%;"></div>
+                </div>
+                <p class="progress-text">50% Complete</p>
+            </div>
+            <div class="education-card glow-card">
+                <i class="fas fa-university icon-glow"></i>
+                <h3>Fixed Deposits Explained</h3>
+                <p>The safest way to invest your money for fixed returns.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                </div>
+                <p class="progress-text">90% Complete</p>
+            </div>
+            <div class="education-card glow-card">
+                <i class="fas fa-piggy-bank icon-glow"></i>
+                <h3>The Power of Compounding</h3>
+                <p>See how your money can grow exponentially over time.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 40%;"></div>
+                </div>
+                <p class="progress-text">40% Complete</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <h4>Investment Bot</h4>
+            <button id="chatbot-close">&times;</button>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="chat-message bot-message">
+                <p>Hello! I'm your investment assistant. Ask me anything about finance!</p>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Type your question...">
+            <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Disclaimer: This project is for educational purposes only, not financial advice. Please consult a professional advisor before investing.</p>
+    </footer>
+
+    <script src="script-education.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
