@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Smart Investment Advisor</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <header class="navbar">
+        <div class="logo">Smart Invest</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="plan.html">Plan</a></li>
+                <li><a href="simulator.html">Simulator</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="#" id="chatbot-toggle">Chatbot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Your Portfolio Dashboard</h1>
+
+        <div class="portfolio-summary-grid">
+            <div class="portfolio-chart glow-card">
+                <h2 class="section-title">Asset Allocation</h2>
+                <div class="chart-container">
+                    <canvas id="portfolioDoughnutChart"></canvas>
+                </div>
+            </div>
+            <div class="portfolio-chart glow-card">
+                <h2 class="section-title">Growth Over Time</h2>
+                <div class="chart-container">
+                    <canvas id="portfolioBarChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-cards-grid">
+            <div class="portfolio-asset-card glow-card">
+                <i class="fas fa-chart-line icon-glow"></i>
+                <h3>Stocks</h3>
+                <p>Value: ₹ <span class="asset-value">1,50,000</span></p>
+                <p>Return: <span class="asset-return-positive">+15.2%</span></p>
+            </div>
+            <div class="portfolio-asset-card glow-card">
+                <i class="fas fa-piggy-bank icon-glow"></i>
+                <h3>Mutual Funds</h3>
+                <p>Value: ₹ <span class="asset-value">2,10,000</span></p>
+                <p>Return: <span class="asset-return-positive">+12.5%</span></p>
+            </div>
+            <div class="portfolio-asset-card glow-card">
+                <i class="fas fa-university icon-glow"></i>
+                <h3>Fixed Deposits</h3>
+                <p>Value: ₹ <span class="asset-value">80,000</span></p>
+                <p>Return: <span class="asset-return-positive">+6.8%</span></p>
+            </div>
+            <div class="portfolio-asset-card glow-card">
+                <i class="fas fa-gem icon-glow"></i>
+                <h3>Gold</h3>
+                <p>Value: ₹ <span class="asset-value">50,000</span></p>
+                <p>Return: <span class="asset-return-negative">-2.1%</span></p>
+            </div>
+        </div>
+    </main>
+
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <h4>Investment Bot</h4>
+            <button id="chatbot-close">&times;</button>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="chat-message bot-message">
+                <p>Hello! I'm your investment assistant. Ask me anything about finance!</p>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Type your question...">
+            <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Disclaimer: This project is for educational purposes only, not financial advice. Please consult a professional advisor before investing.</p>
+    </footer>
+
+    <script src="script-portfolio.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="charts.js"></script>
+</body>
+</html>
